@@ -1,0 +1,156 @@
+/**
+ * Default rules
+ */
+
+module.exports = {
+  rules: {
+    // TypeScript-specific
+    'adjacent-overload-signatures': true,
+    'ban-types': true,
+    'member-access': true,
+    'member-ordering': [true, {order: 'fields-first'}],
+    'no-empty-interface': true,
+    'no-import-side-effect': true,
+    'no-inferrable-types': true,
+    'no-internal-module': true,
+    'no-magic-numbers': false, // by default it will find too many false positives
+    'no-namespace': false, // do use namespace
+    'no-non-null-assertion': true,
+    'no-parameter-reassignment': true,
+    'no-reference': true,
+    'no-unnecessary-type-assertion': true,
+    'no-var-requires': true,
+    'only-arrow-funtions': false, // many situation need to declare a function
+    'prefer-for-of': true,
+    'promise-function-async': true,
+    'typedef': [true, 'call-signature', 'arrow-call-signature', 'parameter', 'arrow-parameter', 'property-declaration', 'member-variable-declaration'],
+    'typedef-whitespace': true,
+    'unified-signatures': true,
+
+    // Functionality
+    'await-promise': true,
+    'ban-comma-operator': true,
+    'ban': false, // nothing to ban now
+    'curly': [true, 'ignore-same-line'],
+    'forin': true,
+    'import-blacklist': false, // nothing to ban now
+    'label-position': true,
+    'no-arg': true,
+    'no-bitwise': true,
+    'no-conditional-assignment': true,
+    'no-console': [true, 'debug', 'info', 'error', 'log', 'time', 'timeEnd', 'trace'],
+    'no-construct': true,
+    'no-debugger': true,
+    'no-duplicate-super': true,
+    'no-duplicate-switch-case': true,
+    'no-duplicate-variable': true,
+    'no-dynamic-delete': true,
+    'no-empty': true,
+    'no-eval': true,
+    'no-floating-promises': true,
+    'no-for-in-array': true,
+    'no-implicit-dependencies': true,
+    'no-inferred-empty-object-type': true,
+    'no-invalid-template-strings': true,
+    'no-invalid-this': true,
+    'no-misused-new': true,
+    'no-null-keyword': true,
+    'no-object-literal-type-assertion': true,
+    'no-return-await': true,
+    'no-shadowed-variable': true,
+    'no-sparse-arrays': true,
+    'no-string-literal': true,
+    'no-string-throw': true,
+    'no-submodule-imports': true,
+    'no-switch-case-fall-through': true,
+    'no-this-assignment': true,
+    'no-unbound-method': true,
+    'no-unnecessary-class': true,
+    'no-unsafe-any': true,
+    'no-unsafe-finally': true,
+    'no-unused-expression': true,
+    'no-use-before-declare': true,
+    'no-var-keyword': true,
+    'no-void-expression': true,
+    'prefer-conditional-expression': false, // unnecessary strict
+    'prefer-object-spread': true,
+    'radix': true,
+    'restrict-plus-operands': true,
+    'strict-boolean-expressions': true,
+    'strict-type-predicates': true,
+    'switch-default': true,
+    'triple-equals': true,
+    'use-default-type-parameter': true,
+    'use-isnan': true,
+
+    // Maintainability
+    'cyclomatic-complexity': true,
+    'deprecation': false, // deprecated APIs are sometimes unavoidable
+    'eofline':true,
+    'indent': [true, 'spaces'],
+    'linebreak-style': [true, 'LF'],
+    'max-classes-per-file': [true, 3], // recommend making one public class per file
+    'max-file-line-count': [true, 500],
+    'max-line-length': [true, 120],
+    'no-default-export': false, // default export is useful
+    'no-duplicate-imports': true,
+    'no-mergeable-namespace': false, // mergeable namespace is useful
+    'no-require-imports': true,
+    'object-literal-sort-keys': false, // sort keys in a meaningful manner
+    'prefer-const': true,
+    'prefer-readonly': true,
+    'trailing-comma': true,
+
+    // Style
+    'align': [true, 'parameters', 'arguments', 'statements'],
+    'array-type': [true, 'array'],
+    'arrow-parens': false, // for simple functions the parens on arrow functions are not needed
+    'arrow-return-shorthand': true,
+    'binary-expression-operand-order': true,
+    'callable-types': true,
+    'class-name': true,
+    'comment-format': [true, 'check-space'],
+    'completed-docs': false, // can enable in future
+    'encoding': true,
+    'file-header': false, // can enable in future
+    'file-name-casing': false, // can enable in future
+    'import-spacing': false, // disable import spacing for more compact
+    'interface-name': [true, 'never-prefix'],
+    'interface-over-type-literal': false, // plenty reasons to use type literal
+    'jsdoc-format': true,
+    'match-default-export-name': true,
+    'newline-before-return': true,
+    'newline-per-chained-call': true,
+    'new-parens': true,
+    'no-angle-bracket-type-assertion': false, // pick either type-case format and use it consistently
+    'no-boolean-literal-compare': true,
+    'no-consecutive-blank-lines': true,
+    'no-irregular-whitespace': true,
+    'no-parameter-properties': false, // clean and useful
+    'no-redundant-jsdoc': true,
+    'no-reference-import': true,
+    'no-trailing-whitespace': [true, 'ignore-template-strings'],
+    'no-unnecessary-callback-wrapper': true,
+    'no-unnecessary-initializer': true,
+    'no-unnecessary-qualifier': true,
+    'number-literal-format': true,
+    'object-literal-key-quotes': [true, 'as-needed'],
+    'object-literal-shorthand': true,
+    'one-line': true,
+    'one-variable-per-declaration': true,
+    'ordered-imports': true,
+    'prefer-function-over-method': [true, 'allow-public', 'allow-protected'],
+    'prefer-method-signature': true,
+    'prefer-switch': false, // more of a style preference
+    'prefer-template': true,
+    'prefer-while': true,
+    'quotemark': [true, 'single', 'jsx-double'],
+    'return-undefined': false, // this actually affect the readability of the code
+    'semicolon': [true, 'never'],
+    'space-before-function-paren': false, // can be turn on if really your coding standard
+    'switch-final-break': true,
+    'type-literal-delimiter': false, // cause we don't use semicolons
+    'variable-name': true,
+    'whitespace': [true, 'check-branch', 'check-decl', 'check-operator', 'check-separator', 'check-rest-spread', 'check-type'],
+  },
+}

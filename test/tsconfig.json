@@ -1,0 +1,13 @@
+{
+  "include": [
+    "passed/**/*",
+    "failed/**/*"
+  ],
+  "compilerOptions": {
+    "target": "es6",
+    "lib": ["es2015"],
+    "strictNullChecks": true,
+    "module": "commonjs",
+    "moduleResolution": "node"
+  }
+}
