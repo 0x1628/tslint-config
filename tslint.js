@@ -7,7 +7,7 @@ module.exports = {
     // TypeScript-specific
     'adjacent-overload-signatures': true,
     'ban-types': true,
-    'member-access': true,
+    'member-access': [true, 'no-public'],
     'member-ordering': [true, {order: 'fields-first'}],
     'no-empty-interface': true,
     'no-import-side-effect': true,
@@ -16,14 +16,15 @@ module.exports = {
     'no-magic-numbers': false, // by default it will find too many false positives
     'no-namespace': false, // do use namespace
     'no-non-null-assertion': true,
-    'no-parameter-reassignment': true,
+    'no-parameter-reassignment': false, // some situation is useful
     'no-reference': true,
     'no-unnecessary-type-assertion': true,
     'no-var-requires': true,
     'only-arrow-funtions': false, // many situation need to declare a function
     'prefer-for-of': true,
-    'promise-function-async': true,
-    'typedef': [true, 'call-signature', 'arrow-call-signature', 'parameter', 'arrow-parameter', 'property-declaration', 'member-variable-declaration'],
+    'promise-function-async': false,
+    // arrow param disabled for parens disabled
+    'typedef': [true, 'property-declaration', 'member-variable-declaration'],
     'typedef-whitespace': true,
     'unified-signatures': true,
 
@@ -38,7 +39,7 @@ module.exports = {
     'no-arg': true,
     'no-bitwise': true,
     'no-conditional-assignment': true,
-    'no-console': [true, 'debug', 'info', 'error', 'log', 'time', 'timeEnd', 'trace'],
+    'no-console': [true, 'debug', 'info', 'log', 'time', 'timeEnd', 'trace'],
     'no-construct': true,
     'no-debugger': true,
     'no-duplicate-super': true,
@@ -55,7 +56,7 @@ module.exports = {
     'no-invalid-this': true,
     'no-misused-new': true,
     'no-null-keyword': true,
-    'no-object-literal-type-assertion': true,
+    'no-object-literal-type-assertion': false, // useful for object init
     'no-return-await': true,
     'no-shadowed-variable': true,
     'no-sparse-arrays': true,
@@ -66,17 +67,17 @@ module.exports = {
     'no-this-assignment': true,
     'no-unbound-method': true,
     'no-unnecessary-class': true,
-    'no-unsafe-any': true,
+    'no-unsafe-any': false,
     'no-unsafe-finally': true,
     'no-unused-expression': true,
     'no-use-before-declare': true,
     'no-var-keyword': true,
-    'no-void-expression': true,
+    'no-void-expression': false,
     'prefer-conditional-expression': false, // unnecessary strict
     'prefer-object-spread': true,
     'radix': true,
     'restrict-plus-operands': true,
-    'strict-boolean-expressions': true,
+    'strict-boolean-expressions': false, // for more flexible
     'strict-type-predicates': true,
     'switch-default': true,
     'triple-equals': true,
@@ -119,8 +120,8 @@ module.exports = {
     'interface-over-type-literal': false, // plenty reasons to use type literal
     'jsdoc-format': true,
     'match-default-export-name': true,
-    'newline-before-return': true,
-    'newline-per-chained-call': true,
+    'newline-before-return': false, // no need
+    'newline-per-chained-call': false, // no need
     'new-parens': true,
     'no-angle-bracket-type-assertion': false, // pick either type-case format and use it consistently
     'no-boolean-literal-compare': true,

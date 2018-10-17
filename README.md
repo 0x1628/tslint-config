@@ -1,15 +1,15 @@
-* @fragment0/tslint-config
+# @fragment0/tslint-config
 
-** Installation
+## Installation
 
-#+BEGIN_SRC shell
+```
 npm i -D tslint @fragment0/tslint-config
-#+END_SRC
+```
 
 Then add to your ~tslint.json~ file:
 
-#+BEGIN_SRC json
+```json
 {
   "extends": "@fragment0/tslint-config"
 }
-#+END_SRC
+```
