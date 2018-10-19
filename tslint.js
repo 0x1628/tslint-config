@@ -50,7 +50,7 @@ module.exports = {
     'no-eval': true,
     'no-floating-promises': true,
     'no-for-in-array': true,
-    'no-implicit-dependencies': true,
+    'no-implicit-dependencies': [true, 'dev'],
     'no-inferred-empty-object-type': true,
     'no-invalid-template-strings': true,
     'no-invalid-this': true,
@@ -87,7 +87,7 @@ module.exports = {
     // Maintainability
     'cyclomatic-complexity': true,
     'deprecation': false, // deprecated APIs are sometimes unavoidable
-    'eofline':true,
+    'eofline': false, // no need
     'indent': [true, 'spaces'],
     'linebreak-style': [true, 'LF'],
     'max-classes-per-file': [true, 3], // recommend making one public class per file
