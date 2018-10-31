@@ -15,7 +15,7 @@ module.exports = {
     'no-internal-module': true,
     'no-magic-numbers': false, // by default it will find too many false positives
     'no-namespace': false, // do use namespace
-    'no-non-null-assertion': true,
+    'no-non-null-assertion': false, // make developer decide
     'no-parameter-reassignment': false, // some situation is useful
     'no-reference': true,
     'no-unnecessary-type-assertion': true,
@@ -24,7 +24,7 @@ module.exports = {
     'prefer-for-of': true,
     'promise-function-async': false,
     // arrow param disabled for parens disabled
-    'typedef': [true, 'property-declaration', 'member-variable-declaration'],
+    'typedef': false, // many time def can be done by type assertion
     'typedef-whitespace': true,
     'unified-signatures': true,
 
@@ -55,14 +55,14 @@ module.exports = {
     'no-invalid-template-strings': true,
     'no-invalid-this': true,
     'no-misused-new': true,
-    'no-null-keyword': true,
+    'no-null-keyword': false, // use null instead of undefined
     'no-object-literal-type-assertion': false, // useful for object init
     'no-return-await': true,
     'no-shadowed-variable': true,
     'no-sparse-arrays': true,
     'no-string-literal': true,
     'no-string-throw': true,
-    'no-submodule-imports': true,
+    'no-submodule-imports': false, // submodule import is useful
     'no-switch-case-fall-through': true,
     'no-this-assignment': true,
     'no-unbound-method': true,
@@ -100,10 +100,10 @@ module.exports = {
     'object-literal-sort-keys': false, // sort keys in a meaningful manner
     'prefer-const': true,
     'prefer-readonly': true,
-    'trailing-comma': true,
+    'trailing-comma': [true, {'multiline': 'always', 'singleline': 'never'}],
 
     // Style
-    'align': [true, 'parameters', 'arguments', 'statements'],
+    'align': [true, 'parameters', 'statements'],
     'array-type': [true, 'array'],
     'arrow-parens': false, // for simple functions the parens on arrow functions are not needed
     'arrow-return-shorthand': true,
@@ -139,7 +139,7 @@ module.exports = {
     'object-literal-shorthand': true,
     'one-line': true,
     'one-variable-per-declaration': true,
-    'ordered-imports': true,
+    'ordered-imports': false, // no need
     'prefer-function-over-method': [true, 'allow-public', 'allow-protected'],
     'prefer-method-signature': true,
     'prefer-switch': false, // more of a style preference
@@ -151,7 +151,7 @@ module.exports = {
     'space-before-function-paren': false, // can be turn on if really your coding standard
     'switch-final-break': true,
     'type-literal-delimiter': false, // cause we don't use semicolons
-    'variable-name': true,
+    'variable-name': [true, 'ban-keywords'],
     'whitespace': [true, 'check-branch', 'check-decl', 'check-operator', 'check-separator', 'check-rest-spread', 'check-type'],
   },
 }
