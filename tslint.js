@@ -8,7 +8,13 @@ module.exports = {
     'adjacent-overload-signatures': true,
     'ban-types': true,
     'member-access': [true, 'no-public'],
-    'member-ordering': [true, {order: 'fields-first'}],
+    'member-ordering': [true, {order: [
+      'static-field',
+      'static-method',
+      'instance-field',
+      'constroctor',
+      'instance-method'
+    ]}],
     'no-empty-interface': true,
     'no-import-side-effect': true,
     'no-inferrable-types': true,
