@@ -12,7 +12,7 @@ module.exports = {
       'static-field',
       'static-method',
       'instance-field',
-      'constroctor',
+      'constructor',
       'instance-method'
     ]}],
     'no-empty-interface': true,
@@ -30,7 +30,7 @@ module.exports = {
     'prefer-for-of': true,
     'promise-function-async': false,
     // arrow param disabled for parens disabled
-    'typedef': false, // many time def can be done by type assertion
+    'typedef': [true, "parameter"], // many time def can be done by type assertion
     'typedef-whitespace': true,
     'unified-signatures': true,
 
@@ -93,7 +93,7 @@ module.exports = {
     // Maintainability
     'cyclomatic-complexity': true,
     'deprecation': false, // deprecated APIs are sometimes unavoidable
-    'eofline': false, // no need
+    'eofline': true,
     'indent': [true, 'spaces'],
     'linebreak-style': [true, 'LF'],
     'max-classes-per-file': [true, 3], // recommend making one public class per file

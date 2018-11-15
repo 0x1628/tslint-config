@@ -1,6 +1,6 @@
 {
   "name": "@fragment0/tslint-config",
-  "version": "0.1.4",
+  "version": "0.1.6",
   "description": "TSLint Rules for fragment0",
   "main": "tslint.js",
   "files": [
