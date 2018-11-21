@@ -30,7 +30,7 @@ module.exports = {
     'prefer-for-of': true,
     'promise-function-async': false,
     // arrow param disabled for parens disabled
-    'typedef': [true, "parameter"], // many time def can be done by type assertion
+    'typedef': false, // many time def can be done by type assertion
     'typedef-whitespace': true,
     'unified-signatures': true,
 
