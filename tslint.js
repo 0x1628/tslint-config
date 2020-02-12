@@ -76,7 +76,6 @@ module.exports = {
     'no-unsafe-any': false,
     'no-unsafe-finally': true,
     'no-unused-expression': true,
-    'no-use-before-declare': true,
     'no-var-keyword': true,
     'no-void-expression': false,
     'prefer-conditional-expression': false, // unnecessary strict
@@ -106,7 +105,14 @@ module.exports = {
     'object-literal-sort-keys': false, // sort keys in a meaningful manner
     'prefer-const': true,
     'prefer-readonly': true,
-    'trailing-comma': [true, {'multiline': 'always', 'singleline': 'never'}],
+    'trailing-comma': [
+      true,
+      {
+        'multiline': 'always',
+        'singleline': 'never',
+        'esSpecCompliant': true,
+      },
+    ],
 
     // Style
     'align': [true, 'parameters', 'statements'],

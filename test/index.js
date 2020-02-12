@@ -32,7 +32,7 @@ describe('TSLint Config for fragment0', () => {
             if (errResult) {
               errorCount = Number(errResult[1])
             }
-            if (errorCount && errorCount !== stdout.split('\n').filter(Boolean).length) {
+            if (errorCount && errorCount !== stdout.split('\n').filter(Boolean).length - 1) {
               resolve({
                 type: 2,
                 target: fName,

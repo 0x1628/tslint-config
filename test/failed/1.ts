@@ -1,5 +1,6 @@
 // error count: 2
 
-export function(test) {
+export function nana(test) {
+  var c = 333
   return false
 }
